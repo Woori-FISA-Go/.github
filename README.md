@@ -198,9 +198,11 @@ K-콘텐츠 시장의 급격한 성장에도 불구하고, 캐릭터·웹툰 등
 
 ## 🔗 리포지토리 링크
 
-각 파트별 상세 구현 내용과 코드는 아래 리포지토리에서 확인할 수 있습니다.
+본 프로젝트는 마이크로서비스 및 하이브리드 인프라 구조를 반영하여 기능별로 리포지토리를 분리해 관리하고 있습니다.
 
-- **Frontend:** [IPiece-web](https://github.com/Woori-FISA-Go/IPiece-web)
-- **Backend:** [IPiece-server](https://github.com/Woori-FISA-Go/IPiece-server)
-- **Blockchain:** [IPiece-blockchain](https://github.com/Woori-FISA-Go/IPiece-blockchain)
-- **Infra:** [IPiece-infra](https://github.com/Woori-FISA-Go/ipiece-manifests)
+| 영역 | 설명 | 링크 |
+| :--- | :--- | :---: |
+| 🎨 **Frontend** | • **Next.js** 기반의 투자자용 웹 애플리케이션입니다.<br>• **WebSocket**을 통한 실시간 호가/차트 및 포트폴리오 시각화 기능을 포함합니다.<br>• `shadcn/ui`와 `Tailwind CSS`를 활용한 반응형 UI를 구현했습니다. | [IPiece-web](https://github.com/Woori-FISA-Go/IPiece-web) |
+| ⚙️ **Backend** | • **Spring Boot** 기반의 핵심 비즈니스 로직 및 REST API 서버입니다.<br>• 회원/자산 관리, **주식형 호가 매칭 엔진**, 블록체인 연동을 담당합니다.<br>• **EC2(PostgreSQL HA)** 및 외부 시스템과의 데이터 정합성을 관리합니다. | [IPiece-server](https://github.com/Woori-FISA-Go/IPiece-server) |
+| ⛓️ **Blockchain** | • **Hyperledger Besu** 프라이빗 네트워크 구성 및 설정 파일입니다.<br>• STO 발행, 배당, 소각을 위한 **Solidity 스마트 컨트랙트** 원본을 포함합니다.<br>• 제네시스 설정 및 노드 키 관리 스크립트가 포함되어 있습니다. | [IPiece-blockchain](https://github.com/Woori-FISA-Go/IPiece-blockchain) |
+| 🏗️ **Infrastructure** | • **AWS & On-Premise** 하이브리드 환경 구성을 위한 **Terraform** 코드입니다.<br>• **ArgoCD** 연동을 위한 **Kubernetes Manifests (Helm/Kustomize)** 파일입니다.<br>• 구축 가이드 및 트러블슈팅 문서가 정리되어 있습니다. | [IPiece-infra](https://github.com/Woori-FISA-Go/ipiece-manifests) |
